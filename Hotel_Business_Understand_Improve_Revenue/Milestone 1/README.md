@@ -38,7 +38,7 @@ The final model follows a Star Schema architecture with **One-to-Many** relation
 
 ### 5. Calculated Columns (DAX)
 New metrics were added using DAX for analysis:
-* **Booking Duration (Total Nights):** `DATEDIFF('Raw_fact'[Check-in Date], 'Raw_fact'[Check-out Date], DAY)`
+* **Booking Duration (Total Nights):** Total_nights = Raw_fact[stays_in_week_nights] + Raw_fact[stays_in_weekend_nights]
 * **Stay Type:** Categorized duration into:
     * *Short* (0-3 days)
     * *Medium* (4-7 days)
