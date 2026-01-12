@@ -4,7 +4,7 @@
 
 ### Module 1: Data Modeling and Ingestion
 
-**Intern:** [Your Name]
+**Intern:** Meenaal Joshi
 
 **Date:** January 12, 2025
 
