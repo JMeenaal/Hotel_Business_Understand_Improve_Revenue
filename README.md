@@ -14,32 +14,13 @@
 
 This project focuses on building a robust Business Intelligence solution for a hotel chain to analyze booking patterns, revenue streams, and customer behavior. The goal of **Module 1** was to ingest raw CSV data, perform ETL (Extract, Transform, Load) operations using Power Query, and design a Star Schema data model in Power BI to facilitate high-performance reporting.
 
-## Repository Structure
-
-As per the submission guidelines, the repository is organized as follows:
-
-```text
-Hotel_Business_Understand_Improve_Revenue/
- ── Milestone 1/
-     ├── Module1_PowerBI.pbix           # The main functional Power BI file
-     ├── data/
-     │   └── Hotel book (1).csv         # Raw dataset used for analysis
-     ├── screenshots/                   
-     │   ├── data_model.png             # Star Schema Diagram
-     │   ├── power_query_steps.png      # ETL Transformations
-     │   └── visuals.png                # Key insights visualization
-     └── README.md                      # Project documentation
-
-```
-
----
 
 ## Dataset Description
 
 The source data (`Hotel book (1).csv`) contains daily aggregated booking records.
 
 * **Timeframe:** Daily records (2024-2025).
-* **Key Metrics:** Revenue, Occupancy Rate, ADR (Average Daily Rate), RevPAR, Expenses, and Profit.
+* **Key Metrics:** Revenue, Occupancy Rate, ADR (Average Daily Rate), RevPAR, Expenses and Profit.
 * **Dimensions:** Guest Country, Guest Type (Business/Leisure), Booking Channel, and Seasonality.
 
 ---
@@ -117,5 +98,3 @@ Based on the initial data modeling and visualization:
 4. **Customer Demographics:** There is a distinct split between "Business" guests (mostly short stays) and "Leisure" guests (medium/long stays).
 
 
-
-For any queries regarding this milestone, please contact: **[Your Email]**
