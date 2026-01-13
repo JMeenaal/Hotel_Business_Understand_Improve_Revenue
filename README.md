@@ -12,7 +12,6 @@ The source data (`Hotel book (1).csv`) contains daily aggregated booking records
 * **Key Metrics:** Revenue, Occupancy Rate, ADR (Average Daily Rate), RevPAR, Expenses and Profit.
 * **Dimensions:** Guest Country, Guest Type, Booking Channel and Seasonality.
 
-
 ## Data Modeling Steps
 
 ### 1. Data Transformation (In Power Query)
@@ -38,7 +37,7 @@ The source data (`Hotel book (1).csv`) contains daily aggregated booking records
 Based on the initial data modeling and visualization:
 
 1. **Revenue Drivers:** Premium rooms contribute significantly to the total revenue despite having lower occupancy volume compared to standard rooms.
-2. **Stay Duration:** The majority of bookings fall into the "Medium" (3-7 days) category, suggesting a strong leisure market.
+2. **Stay Duration:** The majority of bookings fall into the "Medium" (3-6 days) category, suggesting a strong leisure market.
 3. **Seasonality:** Revenue peaks during specific seasons, correlating with the "Holiday" flag in the dataset.
 4. **Customer Demographics:** There is a distinct split between "Business" guests (mostly short stays) and "Leisure" guests (medium/long stays).
 
