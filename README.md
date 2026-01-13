@@ -4,89 +4,34 @@
 
 ### Module 1: Data Modeling and Ingestion
 
-**Intern:** Meenaal Joshi
-
-**Date:** January 12, 2025
-
-**Milestone:** 1
-
-## Project Overview
-
-This project focuses on building a robust Business Intelligence solution for a hotel chain to analyze booking patterns, revenue streams, and customer behavior. The goal of **Module 1** was to ingest raw CSV data, perform ETL (Extract, Transform, Load) operations using Power Query, and design a Star Schema data model in Power BI to facilitate high-performance reporting.
-
-
 ## Dataset Description
 
 The source data (`Hotel book (1).csv`) contains daily aggregated booking records.
 
 * **Timeframe:** Daily records (2024-2025).
 * **Key Metrics:** Revenue, Occupancy Rate, ADR (Average Daily Rate), RevPAR, Expenses and Profit.
-* **Dimensions:** Guest Country, Guest Type (Business/Leisure), Booking Channel, and Seasonality.
+* **Dimensions:** Guest Country, Guest Type, Booking Channel and Seasonality.
 
----
 
-## Methodology & Data Modeling
+## Data Modeling Steps
 
-### 1. Data Transformation (Power Query)
+### 1. Data Transformation (In Power Query)
 
-The raw data was flat (denormalized). To create a scalable model, the following transformations were applied:
-
-* **Base Query Creation:** Created a `Base_Data` staging query (load disabled) to act as the single source of truth.
+* **Base Query Creation:** Created a `fact table` query to act as the single source of truth.
 * **Data Type Validation:** Ensured all currency fields were set to Fixed Decimal and dates to Date type.
-* **Derived Dimensions:** Since the raw data lacked specific dimension tables, I engineered them:
-* **Dim_Room:** Derived from unique price points (ADR) to categorize rooms into "Standard" and "Premium".
-* **Dim_Branches:** Created a custom column to simulate a multi-branch structure (Main Hotel Branch) for future scalability.
-* **Dim_Customer:** Created using unique combinations of `Guest_Type` and `Guest_Country`.
-
-
+* **Derived Dimensions:** Since the raw data lacked specific dimension tables, made the following:
+    **Dim_Room:** Derived from unique price points (ADR) to categorize rooms into "Standard" and "Premium".
+    **Dim_Branches:** Created a custom column to simulate a multi-branch structure (Main Hotel Branch) for future scalability.
+    **Dim_Customer:** Created using unique combinations of `Guest_Type` and `Guest_Country`.
 
 ### 2. The Star Schema
 
-A **Star Schema** was designed to optimize query performance.
-
-* **Fact Table:** `Fact_Bookings` (Contains all quantitative metrics like Revenue, Costs, No_shows).
+* **Fact Table:** `Fact_Bookings`
 * **Dimension Tables:**
 * `Dim_Date` (Linked via Date).
 * `Dim_Customer` (Linked via Surrogate Key `Customer ID`).
 * `Dim_Room` (Linked via Surrogate Key `Room_Key`).
 * `Dim_Branches` (Linked via Surrogate Key `Branch_ID`).
-
-
-
-> **Relationship Logic:** relationships were established as **1-to-Many** (from Dimension to Fact) to ensure accurate filtering and slicing.
-
-### 3. Calculated Columns (DAX)
-
-To meet the business requirements, the following columns were calculated in the Fact Table:
-
-**A. Room Category** (Segmentation based on Average Daily Rate)
-
-```dax
-Room Category = IF('Fact_Bookings'[ADR] >= 125, "Premium", "Standard")
-
-```
-
-**B. Booking Duration** (Proxy logic based on Average Length of Stay)
-
-```dax
-Booking Duration = DIVIDE('Fact_Bookings'[Reserved_Rooms], 'Fact_Bookings'[Checkins], 1)
-
-```
-
-**C. Stay Type** (Categorization of stay length)
-
-```dax
-Stay Type = SWITCH(
-    TRUE(),
-    'Fact_Bookings'[Booking Duration] < 3, "Short",
-    'Fact_Bookings'[Booking Duration] <= 7, "Medium",
-    'Fact_Bookings'[Booking Duration] > 7, "Long",
-    "Unknown"
-)
-
-```
-
----
 
 ## Key Observations
 
