@@ -10,7 +10,7 @@ The source data (`Hotel book (1).csv`) contains daily aggregated booking records
 
 * **Timeframe:** Daily records (2024-2025).
 * **Key Metrics:** Revenue, Occupancy Rate, ADR (Average Daily Rate), RevPAR, Expenses and Profit.
-* **Dimensions:** Guest Country, Guest Type, Booking Channel and Seasonality.
+* **Dimensions:** Guest Country, Guest Type, Booking Duration and Seasonality.
 
 ## Data Modeling Steps
 
