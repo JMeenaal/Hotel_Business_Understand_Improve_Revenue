@@ -1,6 +1,5 @@
 Hotel Revenue Analysis - Milestone 2
 
-Since the provided dataset was aggregated by day rather than individual bookings, I adapted the DAX measures to ensure the calculations for Occupancy and ADR matched the financial data correctly.
 
 Revenue and Occupancy Metrics
 
