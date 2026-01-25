@@ -1,5 +1,6 @@
 Hotel Revenue Analysis - Milestone 2
-This milestone focuses on analyzing revenue, occupancy, and guest behavior. Since the provided dataset was aggregated by day rather than individual bookings, I adapted the DAX measures to ensure the calculations for Occupancy and ADR matched the financial data correctly.
+
+Since the provided dataset was aggregated by day rather than individual bookings, I adapted the DAX measures to ensure the calculations for Occupancy and ADR matched the financial data correctly.
 
 Revenue and Occupancy Metrics
 For the key performance indicators, I used weighted aggregations because simple counts would not work with the daily summary data.
