@@ -4,7 +4,7 @@
 
 To predict future demand and assist in workforce planning, I implemented a forecasting model integrating historical trends with predictive analytics.
 
-* **Forecasting Methodology:** I utilized historical booking data to generate predictive values (`yhat`) including upper and lower confidence intervals. These were imported into Power BI to visualize potential future occupancy.
+* **Forecasting Methodology:** I utilized booking data to generate predictive values (`yhat`) including upper and lower confidence intervals. These were imported into Power BI to visualize potential future occupancy.
 * **Forecast Visualization:** The dashboard compares the **Actuals** against the **Forecasted Demand**, allowing for a direct comparison between realized performance and predicted targets.
 
 ---
