@@ -22,7 +22,7 @@ To understand revenue leakage, I created specific visuals to track guests who ca
 
 ## Key Insights and Business Implications
 
-From the forecasting and cancellation analysis, the following business implications were observed:
+From the forecasting and cancellation analysis, 
 
 1.  **Future Demand Peaks:** The forecast indicates specific upcoming periods where booking volume is predicted to exceed the moving average. These periods require proactive **staffing adjustments** and **inventory management** to prevent service bottlenecks.
 2.  **Cancellation Behavior:** Fluctuations in the **Cancellation Rate** correlate with specific seasonal shifts. High cancellation periods suggest a need to review **non-refundable rate policies** or implement stricter deposit rules during peak seasons.
